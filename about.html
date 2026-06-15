@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="О компании NEXT AUTO — лидер рынка автомобилей с пробегом в Чувашской Республике. История, миссия, достижения.">
+    <title>О компании — Next Auto</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#1e3a8a', accent: '#f59e0b' },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    borderRadius: { card: '12px' },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        .btn-transition { transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; }
+        .btn-transition:hover { transform: translateY(-1px); }
+        .mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+        .nav-link { transition: color 0.3s ease; }
+        .nav-link--active { color: #f59e0b; font-weight: 600; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white antialiased">
+
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <a href="index.html" class="flex items-center gap-2" aria-label="Next Auto — на главную">
+                    <div class="w-10 h-10 bg-accent rounded-card flex items-center justify-center font-bold text-primary text-lg">NA</div>
+                    <div>
+                        <span class="text-xl lg:text-2xl font-bold tracking-tight">Next Auto</span>
+                        <span class="hidden sm:block text-xs text-blue-200">Чебоксары</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="tel:+78352250776" class="flex items-center gap-2 hover:text-accent btn-transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        <span class="font-semibold text-lg">8 (8352) 25-07-76</span>
+                    </a>
+                    <button type="button" onclick="openCallbackModal()" class="bg-accent hover:bg-amber-400 text-primary font-semibold px-5 py-2.5 rounded-card btn-transition">Заказать обратный звонок</button>
+                </div>
+                <button type="button" id="burger-btn" class="md:hidden p-2 rounded-card hover:bg-blue-800 btn-transition" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg id="burger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+        </div>
+        <nav class="hidden md:block border-t border-blue-800/50" aria-label="Основная навигация">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 h-12 text-sm lg:text-base">
+                    <li><a href="used-cars.html" class="nav-link hover:text-accent">Авто с пробегом</a></li>
+                    <li><a href="clients.html" class="nav-link hover:text-accent">Наши клиенты</a></li>
+                    <li><a href="contacts.html" class="nav-link hover:text-accent">Контакты</a></li>
+                    <li><a href="about.html" class="nav-link nav-link--active hover:text-accent" aria-current="page">О компании</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="mobile-menu" class="mobile-menu md:hidden overflow-hidden max-h-0 opacity-0 bg-blue-900" aria-label="Мобильная навигация">
+            <div class="px-4 pb-4 pt-2 space-y-3">
+                <a href="used-cars.html" class="block py-2 hover:text-accent btn-transition" onclick="closeMobileMenu()">Авто с пробегом</a>
+                <a href="clients.html" class="block py-2 hover:text-accent btn-transition" onclick="closeMobileMenu()">Наши клиенты</a>
+                <a href="contacts.html" class="block py-2 hover:text-accent btn-transition" onclick="closeMobileMenu()">Контакты</a>
+                <a href="about.html" class="block py-2 text-accent font-semibold" onclick="closeMobileMenu()">О компании</a>
+                <hr class="border-blue-700">
+                <a href="tel:+78352250776" class="flex items-center gap-2 py-2 hover:text-accent btn-transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <span class="font-semibold">8 (8352) 25-07-76</span>
+                </a>
+                <button type="button" onclick="openCallbackModal()" class="w-full bg-accent hover:bg-amber-400 text-primary font-semibold px-5 py-3 rounded-card btn-transition">Заказать обратный звонок</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-gradient-to-br from-primary via-blue-800 to-primary text-white py-12 lg:py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl lg:text-4xl font-extrabold">О компании</h1>
+            </div>
+        </section>
+
+        <article class="py-16 lg:py-24 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+                <section>
+                    <h2 class="text-2xl lg:text-3xl font-bold text-primary mb-6">О компании NEXT AUTO</h2>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Компания NEXT AUTO является лидером в Чувашской Республике
+                        по оказанию полного комплекса автомобильных услуг, от выкупа и продажи
+                        автомобилей с пробегом, до услуг: Trade-in, комиссионная продажа авто, автокредит,
+                        автострахование и другие. Нас выбирают за наш качественный сервис, который позволяет клиентам быстро и по выгодным ценам продать или купить автомобиль с пробегом.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl lg:text-3xl font-bold text-primary mb-6">Миссия компании</h2>
+                    <div class="space-y-4 text-gray-700 text-lg leading-relaxed">
+                        <p>
+                            Формирование цивилизованного рынка автомобилей с пробегом. Мы постоянно повышаем профессионализм нашей команды, стараемся сделать каждому нашему клиенту максимально выгодное предложение и сэкономить его время. Лояльные клиенты — это главная цель нашей работы.
+                        </p>
+                        <p>
+                            Нам очень важно, чтобы клиенты обращались к нам повторно и рекомендовали нас своим друзьям и знакомым.
+                        </p>
+                        <p>
+                            Мы готовы выслушать и учесть все ваши пожелания и рекомендации.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl lg:text-3xl font-bold text-primary mb-6">История автосалона NEXT AUTO</h2>
+                    <div class="space-y-4 text-gray-700 text-lg leading-relaxed">
+                        <p>
+                            История автосалона NEXT AUTO начинается с декабря 2013 года. Тогда был открыт первый крытый автосалон автомобилей с пробегом в Чувашии в п. Кугеси на ул. Тепличная. Основные услуги были продажа автомобилей, выкуп, trade-in и комиссионная продажа. С первого дня работы автосалона главным ориентиром являются лояльные клиенты и качественная работа. В июне 2018 года был открыт автосалон NEXT AUTO в г. Чебоксары на Базовом проезде 6А. В новом шоуруме представлено до 100 автомобилей различных марок. Автопарк постоянно обновляется.
+                        </p>
+                        <p>
+                            Авто салон NEXT AUTO — мультибрендовый, то есть мы продаём автомобили с пробегом всех марок и моделей.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl lg:text-3xl font-bold text-primary mb-6">Наши достижения</h2>
+                    <ul class="space-y-3 text-gray-700 text-lg leading-relaxed list-disc list-inside">
+                        <li>9 лет успешной работы</li>
+                        <li>Более 4 500 проданных автомобилей с пробегом</li>
+                        <li>Более 60 марок проданных автомобилей</li>
+                        <li>В наличии до 100 автомобилей в самом большом крытом автосалоне Чувашии</li>
+                        <li>Более 50% клиентов приезжают за повторными покупками или по рекомендации</li>
+                        <li>1 место в российском ютубе по количеству видеоотзывов клиентов среди автосалонов</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl lg:text-3xl font-bold text-primary mb-6">Профессионалы вторичного рынка</h2>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        <strong class="text-primary">Диагностика.</strong> Каждый автомобиль проходит полную техническую проверку. Мы, как эксперты вторичного рынка, знаем как правильно проверить автомобиль любой марки. В диагностическом листе мы указываем все необходимые рекомендации.
+                    </p>
+                </section>
+
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-primary text-white py-12 lg:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-accent rounded-card flex items-center justify-center font-bold text-primary text-lg">NA</div>
+                        <span class="text-2xl font-bold">Next Auto</span>
+                    </div>
+                    <p class="text-blue-200 text-sm leading-relaxed">Самый большой крытый автосалон в Чувашии. Новые и подержанные автомобили, срочный выкуп.</p>
+                </div>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-accent text-sm uppercase tracking-wider mb-4">Навигация</h3>
+                    <nav aria-label="Навигация в подвале">
+                        <ul class="space-y-2 text-blue-200">
+                            <li><a href="used-cars.html" class="hover:text-accent btn-transition">Авто с пробегом</a></li>
+                            <li><a href="clients.html" class="hover:text-accent btn-transition">Наши клиенты</a></li>
+                            <li><a href="contacts.html" class="hover:text-accent btn-transition">Контакты</a></li>
+                            <li><a href="about.html" class="hover:text-accent btn-transition">О компании</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="flex flex-col items-start md:items-end">
+                    <button type="button" onclick="openCallbackModal()" class="bg-accent hover:bg-amber-400 text-primary font-bold px-6 py-3 rounded-card btn-transition shadow-md">Заказать обратный звонок</button>
+                    <p class="text-blue-200 text-sm mt-4">Пн–Вс: 9:00 — 20:00</p>
+                </div>
+            </div>
+            <div class="border-t border-white/20 mt-10 pt-6 text-center text-blue-300 text-sm">
+                <p>&copy; 2024 Next Auto, Чебоксары. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
