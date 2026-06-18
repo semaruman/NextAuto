@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 
-namespace NextAuto.Domain.Entities;
+namespace NextAuto.Domain.IRepositories;
 
 public interface IRepository<T> where T : class
 {

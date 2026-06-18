@@ -1,6 +1,7 @@
 
 
 using NextAuto.Domain.Entities;
+using NextAuto.Domain.IRepositories;
 
 namespace NextAuto.Application.Interfaces;
 
