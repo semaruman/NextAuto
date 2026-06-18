@@ -1,0 +1,16 @@
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/bin/Debug/net10.0/NextAuto.Application.deps.json
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/bin/Debug/net10.0/NextAuto.Application.dll
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/bin/Debug/net10.0/NextAuto.Application.pdb
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/bin/Debug/net10.0/NextAuto.Domain.dll
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/bin/Debug/net10.0/NextAuto.Domain.pdb
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/obj/Debug/net10.0/NextAuto.Application.csproj.AssemblyReference.cache
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/obj/Debug/net10.0/NextAuto.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/obj/Debug/net10.0/NextAuto.Application.AssemblyInfoInputs.cache
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/obj/Debug/net10.0/NextAuto.Application.AssemblyInfo.cs
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/obj/Debug/net10.0/NextAuto.Application.csproj.CoreCompileInputs.cache
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/obj/Debug/net10.0/NextAuto.Application.sourcelink.json
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/obj/Debug/net10.0/NextAuto.09AE8FBE.Up2Date
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/obj/Debug/net10.0/NextAuto.Application.dll
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/obj/Debug/net10.0/refint/NextAuto.Application.dll
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/obj/Debug/net10.0/NextAuto.Application.pdb
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/obj/Debug/net10.0/ref/NextAuto.Application.dll
