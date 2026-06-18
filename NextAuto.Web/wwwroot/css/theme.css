@@ -1,0 +1,150 @@
+/* Референс: Unique Car — дизайн-токены */
+
+:root {
+    --color-bg: #F2F2F2;
+    --color-white: #FFFFFF;
+    --color-primary: #4B70F5;
+    --color-primary-hover: #3A5FE0;
+    --color-black: #000000;
+    --color-body: #333333;
+    --color-muted: #666666;
+    --radius-card: 32px;
+    --radius-input: 16px;
+    --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.10);
+    --gap-grid: 28px;
+    --section-py: 7.5rem;
+}
+
+/* Заголовки — condensed, uppercase как на референсе */
+.font-heading {
+    font-family: 'Bebas Neue', 'Impact', sans-serif;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-family: 'Bebas Neue', 'Impact', sans-serif;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-black);
+    line-height: 1.05;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+}
+
+/* Тени */
+.shadow-soft {
+    box-shadow: var(--shadow-soft);
+}
+
+.shadow-card {
+    box-shadow: var(--shadow-card);
+}
+
+/* Карточки */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Кнопки — pill shape */
+.btn-transition {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-transition:hover {
+    transform: translateY(-2px);
+}
+
+.btn-pill {
+    border-radius: 9999px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Мобильное меню */
+.mobile-menu {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+    color: var(--color-body);
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-link--active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Секции */
+.section-spacing {
+    padding-top: var(--section-py);
+    padding-bottom: var(--section-py);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-py: 5rem;
+    }
+}
+
+/* Иконки преимуществ — чёрный круг как на референсе */
+.icon-circle {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--color-black);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-circle svg {
+    color: var(--color-white);
+}
+
+/* Футер — чёрный блок с округлением сверху */
+.footer-dark {
+    background-color: var(--color-black);
+    border-radius: 40px 40px 0 0;
+}
+
+/* Форма — инпуты с мягким скруглением */
+.input-field {
+    border-radius: var(--radius-input);
+    border: 1px solid #E0E0E0;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(75, 112, 245, 0.15);
+}
+
+.contact-card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+}

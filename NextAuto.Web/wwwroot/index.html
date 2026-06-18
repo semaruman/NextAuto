@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Автосалон Next Auto в Чебоксарах — новые и подержанные автомобили. Кредит, страховка, Trade-in. Более 100 авто в наличии.">
+    <title>Next Auto — Автосалон в Чебоксарах</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4B70F5',
+                        accent: '#4B70F5',
+                        surface: '#F2F2F2',
+                        dark: '#000000',
+                        body: '#333333',
+                        muted: '#666666',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        heading: ['Bebas Neue', 'Impact', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        card: '32px',
+                    },
+                    boxShadow: {
+                        soft: '0 8px 30px rgba(0, 0, 0, 0.08)',
+                        card: '0 4px 24px rgba(0, 0, 0, 0.06)',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="font-sans text-body bg-surface antialiased">
+
+    <!-- ==================== ШАПКА ==================== -->
+    <header class="bg-white text-black sticky top-0 z-50 shadow-soft">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+
+                <!-- Логотип -->
+                <a href="index.html" class="flex items-center gap-3 group" aria-label="Next Auto — на главную">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center font-bold text-white text-lg">
+                        NA
+                    </div>
+                    <div>
+                        <span class="text-xl lg:text-2xl font-bold tracking-tight text-black">Next Auto</span>
+                        <span class="hidden sm:block text-xs text-muted">Чебоксары</span>
+                    </div>
+                </a>
+
+                <!-- Десктоп: телефон и кнопка -->
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="tel:+78352250778" class="flex items-center gap-2 text-body hover:text-primary btn-transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        <span class="font-semibold text-base">+7 8352-25-07-78</span>
+                    </a>
+                    <button
+                        type="button"
+                        onclick="openCallbackModal()"
+                        class="bg-primary hover:bg-blue-600 text-white font-semibold px-6 py-2.5 rounded-full btn-transition shadow-soft"
+                    >
+                        Заказать обратный звонок
+                    </button>
+                </div>
+
+                <!-- Бургер-кнопка (мобильная) -->
+                <button
+                    type="button"
+                    id="burger-btn"
+                    class="md:hidden p-2 rounded-full hover:bg-surface btn-transition text-black"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <svg id="burger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Десктопная навигация -->
+        <nav class="hidden md:block border-t border-gray-200" aria-label="Основная навигация">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 h-12 text-sm lg:text-base">
+                    <li><a href="used-cars.html" class="nav-link hover:text-primary">Авто с пробегом</a></li>
+                    <li><a href="clients.html" class="nav-link hover:text-primary">Наши клиенты</a></li>
+                    <li><a href="contacts.html" class="nav-link hover:text-primary">Контакты</a></li>
+                    <li><a href="about.html" class="nav-link hover:text-primary">О компании</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Мобильное меню -->
+        <nav
+            id="mobile-menu"
+            class="mobile-menu md:hidden overflow-hidden max-h-0 opacity-0 bg-white border-t border-gray-200"
+            aria-label="Мобильная навигация"
+        >
+            <div class="px-4 pb-4 pt-2 space-y-3 text-body">
+                <a href="used-cars.html" class="block py-2 hover:text-primary btn-transition" onclick="closeMobileMenu()">Авто с пробегом</a>
+                <a href="clients.html" class="block py-2 hover:text-primary btn-transition" onclick="closeMobileMenu()">Наши клиенты</a>
+                <a href="contacts.html" class="block py-2 hover:text-primary btn-transition" onclick="closeMobileMenu()">Контакты</a>
+                <a href="about.html" class="block py-2 hover:text-primary btn-transition" onclick="closeMobileMenu()">О компании</a>
+                <hr class="border-gray-200">
+                <a href="#catalog" class="block py-2 hover:text-primary btn-transition" onclick="closeMobileMenu()">Каталог</a>
+                <a href="#advantages" class="block py-2 hover:text-primary btn-transition" onclick="closeMobileMenu()">Преимущества</a>
+                <a href="#test-drive" class="block py-2 hover:text-primary btn-transition" onclick="closeMobileMenu()">Тест-драйв</a>
+                <hr class="border-gray-200">
+                <a href="tel:+78352250778" class="flex items-center gap-2 py-2 hover:text-primary btn-transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    <span class="font-semibold">+7 8352-25-07-78</span>
+                </a>
+                <button
+                    type="button"
+                    onclick="openCallbackModal()"
+                    class="w-full bg-primary hover:bg-blue-600 text-white font-semibold px-5 py-3 rounded-full btn-transition shadow-soft"
+                >
+                    Заказать обратный звонок
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ==================== ПЕРВЫЙ ЭКРАН (HERO) ==================== -->
+        <section class="relative bg-surface overflow-hidden section-spacing"
+        style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                               url('img/next_auto.jpeg'); 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat;"
+        >
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <span class="inline-block bg-white text-muted border border-gray-200 px-5 py-2 rounded-full text-sm font-medium mb-8 shadow-card">
+                        Самый большой крытый автосалон в Чувашии
+                    </span>
+                    <h1 class="font-heading text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white leading-none mb-8">
+                        Автосалон Next Auto в Чебоксарах
+                    </h1>
+                    <p class="text-white sm:text-lg text-muted mb-10 leading-relaxed max-w-xl">
+                        Новые и автомобили с пробегом. Кредит, страховка, Trade-in
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a
+                            href="used-cars.html"
+                            class="inline-flex items-center justify-center bg-primary hover:bg-blue-600 text-white font-semibold px-8 py-4 rounded-full text-base btn-transition shadow-soft"
+                        >
+                            Смотреть каталог
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <a
+                            href="tel:+78352250778"
+                            class="inline-flex items-center justify-center border-2 border-black hover:bg-black hover:text-white text-black font-semibold px-8 py-4 rounded-full text-white btn-transition"
+                        >
+                            Позвонить сейчас
+                        </a>
+                    </div>
+
+                    <!-- Статистика -->
+                    <div class="grid grid-cols-3 gap-6 mt-16 pt-10 border-t border-gray-300">
+                        <div>
+                            <p class="text-3xl lg:text-4xl font-heading text-primary text-white">100+</p>
+                            <p class="text-sm text-muted mt-2 text-white">авто в наличии</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl lg:text-4xl font-heading text-primary text-white">1-я</p>
+                            <p class="text-sm text-muted mt-2 text-white">линия в центре</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl lg:text-4xl font-heading text-primary text-white">24/7</p>
+                            <p class="text-sm text-muted mt-2 text-white">срочный выкуп</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--
+        <!- ==================== КАТАЛОГ АВТОМОБИЛЕЙ ==================== ->
+        <section id="catalog" class="section-spacing bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title mb-5">Каталог автомобилей</h2>
+                    <p class="section-subtitle max-w-2xl mx-auto">
+                        Более 100 автомобилей в наличии — новые и с пробегом. Данные обновляются ежедневно.
+                    </p>
+                </div>
+
+                <!- Сетка карточек ->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+
+                    <!- Карточка 1 ->
+                    <article class="bg-white rounded-card shadow-card card-hover overflow-hidden">
+                        <div class="h-52 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center" aria-hidden="true">
+                            <svg class="w-20 h-20 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                            </svg>
+                        </div>
+                        <div class="p-7">
+                            <span class="text-xs font-medium text-primary bg-blue-50 px-3 py-1 rounded-full">Новый</span>
+                            <h3 class="text-lg font-bold text-black mt-3">Toyota Camry</h3>
+                            <p class="text-muted text-sm mt-1">2024 год</p>
+                            <p class="text-2xl font-bold text-black mt-3">3 290 000 ₽</p>
+                            <button
+                                type="button"
+                                class="w-full mt-5 bg-primary hover:bg-blue-600 text-white font-semibold py-3 rounded-full btn-transition shadow-soft"
+                            >
+                                Подробнее
+                            </button>
+                        </div>
+                    </article>
+
+                    <!- Карточка 2 ->
+                    <article class="bg-white rounded-card shadow-card card-hover overflow-hidden">
+                        <div class="h-52 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center" aria-hidden="true">
+                            <svg class="w-20 h-20 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                            </svg>
+                        </div>
+                        <div class="p-7">
+                            <span class="text-xs font-medium text-primary bg-blue-50 px-3 py-1 rounded-full">С пробегом</span>
+                            <h3 class="text-lg font-bold text-black mt-3">Kia Sportage</h3>
+                            <p class="text-muted text-sm mt-1">2021 год · 45 000 км</p>
+                            <p class="text-2xl font-bold text-black mt-3">2 150 000 ₽</p>
+                            <button
+                                type="button"
+                                class="w-full mt-5 bg-primary hover:bg-blue-600 text-white font-semibold py-3 rounded-full btn-transition shadow-soft"
+                            >
+                                Подробнее
+                            </button>
+                        </div>
+                    </article>
+
+                    <!- Карточка 3 ->
+                    <article class="bg-white rounded-card shadow-card card-hover overflow-hidden">
+                        <div class="h-52 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center" aria-hidden="true">
+                            <svg class="w-20 h-20 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                            </svg>
+                        </div>
+                        <div class="p-7">
+                            <span class="text-xs font-medium text-primary bg-blue-50 px-3 py-1 rounded-full">Новый</span>
+                            <h3 class="text-lg font-bold text-black mt-3">Hyundai Tucson</h3>
+                            <p class="text-muted text-sm mt-1">2024 год</p>
+                            <p class="text-2xl font-bold text-black mt-3">2 890 000 ₽</p>
+                            <button
+                                type="button"
+                                class="w-full mt-5 bg-primary hover:bg-blue-600 text-white font-semibold py-3 rounded-full btn-transition shadow-soft"
+                            >
+                                Подробнее
+                            </button>
+                        </div>
+                    </article>
+
+                    <!- Карточка 4 ->
+                    <article class="bg-white rounded-card shadow-card card-hover overflow-hidden">
+                        <div class="h-52 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center" aria-hidden="true">
+                            <svg class="w-20 h-20 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                            </svg>
+                        </div>
+                        <div class="p-7">
+                            <span class="text-xs font-medium text-primary bg-blue-50 px-3 py-1 rounded-full">С пробегом</span>
+                            <h3 class="text-lg font-bold text-black mt-3">Volkswagen Polo</h3>
+                            <p class="text-muted text-sm mt-1">2019 год · 62 000 км</p>
+                            <p class="text-2xl font-bold text-black mt-3">1 050 000 ₽</p>
+                            <button
+                                type="button"
+                                class="w-full mt-5 bg-primary hover:bg-blue-600 text-white font-semibold py-3 rounded-full btn-transition shadow-soft"
+                            >
+                                Подробнее
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    -->
+
+        <!-- ==================== ПРЕИМУЩЕСТВА ==================== -->
+        <section id="advantages" class="section-spacing bg-surface">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title mb-5">Почему выбирают нас</h2>
+                    <p class="section-subtitle max-w-2xl mx-auto">
+                        Next Auto — надёжный партнёр при покупке и продаже автомобиля в Чебоксарах
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+
+                    <!-- Преимущество 1: Проверка авто -->
+                    <div class="text-center p-8 rounded-card bg-white shadow-card card-hover">
+                        <div class="icon-circle mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-black mb-3">Выкуп вашего автомобиля</h3>
+                        <p class="text-muted text-sm leading-relaxed">У вас есть автомобиль на продажу? У нас есть деньги! Приезжайте и убедитесь в нашей высокой оценке.</p>
+                    </div>
+
+                    <!-- Преимущество 2: Кредит 0% -->
+                    <div class="text-center p-8 rounded-card bg-white shadow-card card-hover">
+                        <div class="icon-circle mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-black mb-3">Комиссионная продажа</h3>
+                        <p class="text-muted text-sm leading-relaxed">Прием на комиссию является безопасным способом продажи автомобиля</p>
+                    </div>
+
+                    <!-- Преимущество 3: Trade-in 10 минут -->
+                    <div class="text-center p-8 rounded-card bg-white shadow-card card-hover">
+                        <div class="icon-circle mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-black mb-3">Trade-in</h3>
+                        <p class="text-muted text-sm leading-relaxed">Обменяйте Ваш старый автомобиль на новый, по программе Trade-in.</p>
+                    </div>
+
+                    <!-- Преимущество 4: Гарантия 
+                    <div class="text-center p-8 rounded-card bg-white shadow-card card-hover sm:col-span-2 lg:col-span-1">
+                        <div class="icon-circle mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-black mb-3">Гарантия</h3>
+                        <p class="text-muted text-sm leading-relaxed">Юридическая чистота и гарантия на все автомобили</p>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ФОРМА ТЕСТ-ДРАЙВА ==================== -->
+        <section id="test-drive" class="section-spacing bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="section-title mb-5">Заказать звонок</h2>
+                        <p class="section-subtitle">
+                            Остались вопросы или есть предложения? Заказывайте звонок или наберите нам!
+                        </p>
+                    </div>
+
+                    <!-- Форма записи -->
+                    <form
+                        id="test-drive-form"
+                        class="bg-surface p-8 sm:p-10 rounded-card shadow-card space-y-6"
+                        novalidate
+                    >
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-black mb-2">Ваше имя</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                placeholder="Иван Иванов"
+                                class="input-field w-full px-5 py-3.5 bg-white"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold text-black mb-2">Телефон</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                required
+                                placeholder="+7 (___) ___-__-__"
+                                class="input-field w-full px-5 py-3.5 bg-white"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="time" class="block text-sm font-semibold text-black mb-2">Удобное время</label>
+                            <select
+                                id="time"
+                                name="time"
+                                required
+                                class="input-field w-full px-5 py-3.5 bg-white"
+                            >
+                                <option value="" disabled selected>Выберите время</option>
+                                <option value="morning">Утро (9:00 — 12:00)</option>
+                                <option value="afternoon">День (12:00 — 17:00)</option>
+                                <option value="evening">Вечер (17:00 — 20:00)</option>
+                            </select>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full bg-primary hover:bg-blue-600 text-white font-semibold py-4 rounded-full text-base btn-transition shadow-soft"
+                        >
+                            Заказать звонок
+                        </button>
+
+                        <p class="text-xs text-muted text-center">
+                            Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== ФУТЕР ==================== -->
+    <footer class="footer-dark text-white py-14 lg:py-20 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+
+                <!-- Логотип и описание -->
+                <div>
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center font-bold text-white text-lg">
+                            NA
+                        </div>
+                        <span class="text-2xl font-bold">Next Auto</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Самый большой крытый автосалон в Чувашии. Новые и подержанные автомобили, срочный выкуп.
+                    </p>
+                </div>
+
+                <!-- Навигация -->
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-white text-sm uppercase tracking-wider mb-4">Навигация</h3>
+                    <nav aria-label="Навигация в подвале">
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="used-cars.html" class="hover:text-primary btn-transition">Авто с пробегом</a></li>
+                            <li><a href="clients.html" class="hover:text-primary btn-transition">Наши клиенты</a></li>
+                            <li><a href="contacts.html" class="hover:text-primary btn-transition">Контакты</a></li>
+                            <li><a href="about.html" class="hover:text-primary btn-transition">О компании</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Кнопка обратного звонка -->
+                <div class="flex flex-col items-start md:items-end">
+                    <button
+                        type="button"
+                        onclick="openCallbackModal()"
+                        class="bg-primary hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-full btn-transition shadow-soft"
+                    >
+                        Заказать обратный звонок
+                    </button>
+                    <p class="text-gray-400 text-sm mt-5">Пн–Вс: 9:00 — 20:00</p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Next Auto, Чебоксары. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script src="js/main.js"></script>
+    <script>
+        // --- Отправка формы тест-драйва ---
+        const testDriveForm = document.getElementById('test-drive-form');
+
+        testDriveForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const timeSelect = document.getElementById('time');
+            const time = timeSelect.options[timeSelect.selectedIndex].text;
+
+            // Простая валидация
+            if (!name || !phone || !timeSelect.value) {
+                alert('Пожалуйста, заполните все поля формы.');
+                return;
+            }
+
+            alert(
+                'Заявка на тест-драйв принята!\n\n' +
+                'Имя: ' + name + '\n' +
+                'Телефон: ' + phone + '\n' +
+                'Время: ' + time + '\n\n' +
+                'Мы свяжемся с вами для подтверждения записи.'
+            );
+
+            // Сброс формы после отправки
+            testDriveForm.reset();
+        });
+    </script>
+
+</body>
+</html>
