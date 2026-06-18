@@ -1,0 +1,12 @@
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Domain/bin/Debug/net10.0/NextAuto.Domain.deps.json
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Domain/bin/Debug/net10.0/NextAuto.Domain.dll
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Domain/bin/Debug/net10.0/NextAuto.Domain.pdb
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Domain/obj/Debug/net10.0/NextAuto.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Domain/obj/Debug/net10.0/NextAuto.Domain.AssemblyInfoInputs.cache
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Domain/obj/Debug/net10.0/NextAuto.Domain.AssemblyInfo.cs
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Domain/obj/Debug/net10.0/NextAuto.Domain.csproj.CoreCompileInputs.cache
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Domain/obj/Debug/net10.0/NextAuto.Domain.sourcelink.json
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Domain/obj/Debug/net10.0/NextAuto.Domain.dll
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Domain/obj/Debug/net10.0/refint/NextAuto.Domain.dll
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Domain/obj/Debug/net10.0/NextAuto.Domain.pdb
+/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Domain/obj/Debug/net10.0/ref/NextAuto.Domain.dll
