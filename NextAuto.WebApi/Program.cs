@@ -1,9 +1,12 @@
 using Microsoft.EntityFrameworkCore;
+using NextAuto.Application;
 using NextAuto.Infrastructure;
 using NextAuto.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
+builder.Services.AddApplication();
 builder.Services.AddInfrastructure(options =>
 {
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -30,6 +33,6 @@ builder.Services.AddInfrastructure(options =>
 
 var app = builder.Build();
 
-
+app.MapControllers();
 
 app.Run();
