@@ -1,0 +1,30 @@
+# Build results
+**/bin/
+**/obj/
+**/publish/
+
+# Visual Studio / Rider
+**/.idea/
+**/.vs/
+**/*.user
+**/*.suo
+
+# Cache
+*.cache
+*.tmp
+
+# Logs
+*.log
+
+# Runtime
+*.runtimeconfig.json
+
+# User secrets
+**/secrets.json
+
+# Static web assets
+**/staticwebassets/
+
+# Entity Framework migrations snapshot (но не сами миграции!)
+**/*.Designer.cs
+!**/Migrations/*.Designer.cs
