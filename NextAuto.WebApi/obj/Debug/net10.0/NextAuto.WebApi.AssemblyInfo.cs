@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("NextAuto.Domain")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("NextAuto.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+957dbc70245bf6f5d2c10a08341a55d7af699b52")]
-[assembly: System.Reflection.AssemblyProductAttribute("NextAuto.Domain")]
-[assembly: System.Reflection.AssemblyTitleAttribute("NextAuto.Domain")]
+[assembly: System.Reflection.AssemblyProductAttribute("NextAuto.WebApi")]
+[assembly: System.Reflection.AssemblyTitleAttribute("NextAuto.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
