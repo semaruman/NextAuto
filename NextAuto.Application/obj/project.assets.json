@@ -394,7 +394,7 @@
     ]
   },
   "packageFolders": {
-    "/Users/mas/.nuget/packages/": {}
+    "/var/folders/3h/nqx6w50s2xb_p0t01nltzzk80000gn/T/cursor-sandbox-cache/bdc3b02e86baa3f6c085ff901912acf4/nuget": {}
   },
   "project": {
     "version": "1.0.0",
@@ -402,7 +402,7 @@
       "projectUniqueName": "/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/NextAuto.Application.csproj",
       "projectName": "NextAuto.Application",
       "projectPath": "/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/NextAuto.Application.csproj",
-      "packagesPath": "/Users/mas/.nuget/packages/",
+      "packagesPath": "/var/folders/3h/nqx6w50s2xb_p0t01nltzzk80000gn/T/cursor-sandbox-cache/bdc3b02e86baa3f6c085ff901912acf4/nuget",
       "outputPath": "/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [

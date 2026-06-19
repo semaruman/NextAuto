@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NextAuto.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5d1111773dd91df01acff6faee9f60f2f19bd2f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+396ffaf4ebceda1a3612ab15f3ad304cf2148609")]
 [assembly: System.Reflection.AssemblyProductAttribute("NextAuto.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NextAuto.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

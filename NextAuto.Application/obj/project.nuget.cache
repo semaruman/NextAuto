@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "1Arr3VhZltA=",
+  "dgSpecHash": "lKTMYn63ECk=",
   "success": true,
   "projectFilePath": "/Users/mas/Documents/CursorLearningProjects/NextAuto/NextAuto.Application/NextAuto.Application.csproj",
   "expectedPackageFiles": [
-    "/Users/mas/.nuget/packages/mediatr/14.1.0/mediatr.14.1.0.nupkg.sha512",
-    "/Users/mas/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
-    "/Users/mas/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.0/microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512",
-    "/Users/mas/.nuget/packages/microsoft.extensions.logging.abstractions/10.0.0/microsoft.extensions.logging.abstractions.10.0.0.nupkg.sha512",
-    "/Users/mas/.nuget/packages/microsoft.identitymodel.abstractions/8.14.0/microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
-    "/Users/mas/.nuget/packages/microsoft.identitymodel.jsonwebtokens/8.14.0/microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
-    "/Users/mas/.nuget/packages/microsoft.identitymodel.logging/8.14.0/microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
-    "/Users/mas/.nuget/packages/microsoft.identitymodel.tokens/8.14.0/microsoft.identitymodel.tokens.8.14.0.nupkg.sha512"
+    "/var/folders/3h/nqx6w50s2xb_p0t01nltzzk80000gn/T/cursor-sandbox-cache/bdc3b02e86baa3f6c085ff901912acf4/nuget/mediatr/14.1.0/mediatr.14.1.0.nupkg.sha512",
+    "/var/folders/3h/nqx6w50s2xb_p0t01nltzzk80000gn/T/cursor-sandbox-cache/bdc3b02e86baa3f6c085ff901912acf4/nuget/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/var/folders/3h/nqx6w50s2xb_p0t01nltzzk80000gn/T/cursor-sandbox-cache/bdc3b02e86baa3f6c085ff901912acf4/nuget/microsoft.extensions.dependencyinjection.abstractions/10.0.0/microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512",
+    "/var/folders/3h/nqx6w50s2xb_p0t01nltzzk80000gn/T/cursor-sandbox-cache/bdc3b02e86baa3f6c085ff901912acf4/nuget/microsoft.extensions.logging.abstractions/10.0.0/microsoft.extensions.logging.abstractions.10.0.0.nupkg.sha512",
+    "/var/folders/3h/nqx6w50s2xb_p0t01nltzzk80000gn/T/cursor-sandbox-cache/bdc3b02e86baa3f6c085ff901912acf4/nuget/microsoft.identitymodel.abstractions/8.14.0/microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
+    "/var/folders/3h/nqx6w50s2xb_p0t01nltzzk80000gn/T/cursor-sandbox-cache/bdc3b02e86baa3f6c085ff901912acf4/nuget/microsoft.identitymodel.jsonwebtokens/8.14.0/microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
+    "/var/folders/3h/nqx6w50s2xb_p0t01nltzzk80000gn/T/cursor-sandbox-cache/bdc3b02e86baa3f6c085ff901912acf4/nuget/microsoft.identitymodel.logging/8.14.0/microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
+    "/var/folders/3h/nqx6w50s2xb_p0t01nltzzk80000gn/T/cursor-sandbox-cache/bdc3b02e86baa3f6c085ff901912acf4/nuget/microsoft.identitymodel.tokens/8.14.0/microsoft.identitymodel.tokens.8.14.0.nupkg.sha512"
   ],
   "logs": []
 }

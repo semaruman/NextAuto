@@ -9,6 +9,8 @@ public interface IUnitOfWork : IDisposable
 {
     IRepository<Car> Cars { get; }
 
+    IRepository<Client> Clients { get; }
+
     Task<int> SaveChangesAsync();
 
     Task BeginTransactionAsync();
