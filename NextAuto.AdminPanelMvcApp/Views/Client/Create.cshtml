@@ -1,0 +1,42 @@
+@model NextAuto.AdminPanelMvcApp.Models.ClientFormViewModel
+@{
+    ViewData["Title"] = "Добавить клиента";
+}
+
+<h1 class="page-title">@ViewData["Title"]</h1>
+<p class="page-subtitle">Заполните данные о клиенте</p>
+
+<div class="card">
+    <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
+
+    <form asp-action="Create" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <label asp-for="CarBrand"></label>
+            <input asp-for="CarBrand" class="form-control"/>
+            <span asp-validation-for="CarBrand" class="field-validation-error"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CarModel"></label>
+            <input asp-for="CarModel" class="form-control"/>
+            <span asp-validation-for="CarModel" class="field-validation-error"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ImageUrl"></label>
+            <input asp-for="ImageUrl" class="form-control" placeholder="https://example.com/image.jpg"/>
+            <span asp-validation-for="ImageUrl" class="field-validation-error"></span>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+            <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}

@@ -1,4 +1,17 @@
-<h1>Админ-панель NextAuto</h1>
-<div>
-    <a asp-controller="Car" asp-action="Index">Управление автомобилями</a>
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<h1 class="page-title">Админ-панель NextAuto</h1>
+<p class="page-subtitle">Управление каталогом автомобилей и базой клиентов</p>
+
+<div class="card-grid">
+    <a class="card-link" asp-controller="Car" asp-action="Index">
+        <h3>Автомобили</h3>
+        <p>Добавление автомобилей в каталог</p>
+    </a>
+    <a class="card-link" asp-controller="Client" asp-action="Index">
+        <h3>Клиенты</h3>
+        <p>Добавление клиентов</p>
+    </a>
 </div>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NextAuto.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2f118bd9f426f36709e7d3eeff8da011900e39c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c65f4a2c59d82b31c533baa42d774cb68565fa6b")]
 [assembly: System.Reflection.AssemblyProductAttribute("NextAuto.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NextAuto.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

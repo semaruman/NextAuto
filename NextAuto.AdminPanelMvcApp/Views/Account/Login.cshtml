@@ -1,0 +1,48 @@
+@model NextAuto.AdminPanelMvcApp.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Вход";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] — NextAuto Admin</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+</head>
+<body>
+<div class="login-page">
+    <div class="login-card">
+        <h1>NextAuto Admin</h1>
+        <p class="subtitle">Войдите в панель управления</p>
+
+        <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
+
+        <form asp-action="Login" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]"/>
+
+            <div class="form-group">
+                <label asp-for="Login"></label>
+                <input asp-for="Login" class="form-control" autocomplete="username"/>
+                <span asp-validation-for="Login" class="field-validation-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" autocomplete="current-password"/>
+                <span asp-validation-for="Password" class="field-validation-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Войти</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@4.0.0/dist/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

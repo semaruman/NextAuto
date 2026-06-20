@@ -7,9 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Home\Privacy.cshtml" />
-      <_ContentIncludedByDefault Remove="wwwroot\js\site.js" />
+      <ProjectReference Include="..\NextAuto.Application\NextAuto.Application.csproj" />
+      <ProjectReference Include="..\NextAuto.Infrastructure\NextAuto.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.2" />
     </ItemGroup>
 
 </Project>
