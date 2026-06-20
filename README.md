@@ -5,6 +5,7 @@
 > Автосалон Next Auto — новые и подержанные автомобили. Кредит, страховка, Trade-in.
 
 ---
+<img width="1440" height="813" alt="Автосалон NextAuto" src="https://github.com/user-attachments/assets/e5d2111f-0514-4e2c-b81c-1c670224f548" />
 
 ## Проблема
 
